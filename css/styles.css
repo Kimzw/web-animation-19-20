@@ -1,0 +1,130 @@
+body{
+    background: #CF5247;
+    box-sizing: border-box;
+    transition: .3s ease all;
+}
+
+svg{
+    max-width: 96%;
+    height: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    transform: scale(1);
+} 
+
+.tekst{
+    color: #E4804C;
+    position: absolute;
+    margin: 100px 50px;
+    font-family: "Futura", Futura, sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+#jaartal{
+    font-family: "Charter", Charter, serif;
+}
+
+/* Eindpunten*/
+#Eindpunt-boven:hover{
+    fill: #CEA3C6;
+}
+
+.driehoekAchtergrond{
+    background-color: #CEA3C6;
+}
+
+#Eindpunt-rechts:hover{
+    fill: #E0A38D;
+}
+
+.cirkelAchtergrond{
+    background-color: #E0A38D;
+}
+
+#Eindpunt-onder:hover{
+    fill: #A3C6B4;
+}
+
+.vierkantAchtergrond{
+    background-color: #A3C6B4;
+}
+
+/*Motoren*/
+
+.startVliegtuig{
+    animation: starten 0.5s infinite;
+}
+
+@keyframes starten {
+    0% {     
+    }
+    10% {
+    transform:rotateY(-5deg);
+    }
+    20% {
+    transform:rotateY(5deg);
+    }
+    30% {
+    transform:rotateY(-5deg);
+    }
+    40% {
+    transform:rotateY(5deg);
+    }
+    50% {
+    transform:rotateY(-5deg);
+    }
+    60% {
+    transform:rotateY(5deg);
+    }
+    70% {
+    transform:rotateY(-5deg);
+    }
+    80% {
+    transform:rotateY(5deg);
+    }
+    90% {
+    transform:rotateY(-5deg);
+    }
+    100%{
+    transform:rotateY(0deg);
+    }
+}
+
+
+/* Draaien vliegtuig*/
+.draaiRechts{
+    transform:translateY(-14%) translateX(6%) rotate(10deg);
+}
+
+#Vliegtuig {
+    transition: 3s ease all;
+}
+
+.draaiLinks{
+    transform:translateY(16%) translateX(-4.5%) rotate(-10deg);
+}
+
+
+/* Vliegttuig*/
+
+.vliegWeg{
+    animation: vliegen 5s;
+}
+
+@keyframes vliegen {
+    0% {
+        
+    }
+    45% {
+    transform: translateY(-100%) scale(0.5);
+    }
+    55%{
+    transform: translateX(-100%) rotate(180deg);
+    }
+    100% {
+    transform: translateY(0%) scale(1);
+    }
+}
