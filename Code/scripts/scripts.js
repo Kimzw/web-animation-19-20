@@ -52,6 +52,17 @@ function toggle(event) {
     }
 }
 
+document.querySelector('#Vleugel-rechts').addEventListener('click', rechtsDraaien)
+
+function rechtsDraaien (){
+    document.querySelector('#Vliegtuig').classList.toggle("draaiRechts")
+}
+
+document.querySelector('#Vleugel-links').addEventListener('click', linksDraaien)
+
+function linksDraaien (){
+    document.querySelector('#Vliegtuig').classList.toggle("draaiLinks")
+}
 
 
 
@@ -61,7 +72,7 @@ function toggle(event) {
 document.querySelector('#lanceren').addEventListener('click', wegVliegen)
 
 
-function wegVliegen() {
+function wegVliegen() {   
   document.querySelector('#Vliegtuig').classList.add("vliegWeg")
     setTimeout(function(){
     document.querySelector('#Vliegtuig').classList.remove("vliegWeg")
@@ -72,4 +83,17 @@ function wegVliegen() {
     setTimeout(function(){
     document.querySelector('.draaiLinks').classList.remove("draaiLinks")
     }, 2000);
+    setTimeout(function(){
+    document.querySelector('#Vliegtuig').classList.remove("startVliegtuig")
+    }, 2000);
+    
 }
+
+document.querySelector('#lanceren').addEventListener('click', bloemenDraaien)
+
+function bloemenDraaien() {  
+document.querySelector('#bloemen').classList.add("bloemendraai")
+    
+setTimeout(function(){
+    document.querySelector('#bloemen').classList.remove("bloemendraai")
+    }, 5000);}

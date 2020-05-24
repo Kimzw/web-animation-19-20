@@ -1,7 +1,25 @@
 body{
-    background: #CF5247;
+    background: #A43A32;
     box-sizing: border-box;
     transition: .3s ease all;
+}
+
+#background{
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px;
+}
+.overlay{
+    opacity: 15%;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: multiply;
+    pointer-events:none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 svg{
@@ -25,11 +43,12 @@ svg{
     font-family: "Futura", Futura, sans-serif;
     font-weight: 100;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 .container{
     font-family: "Charter", Charter, serif;
+    font-size: 1.3em;
     position: absolute;
     top: 50%;
     left:50%;
@@ -44,18 +63,22 @@ span{
 
 span:nth-child(1){
   animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) both, fadeIn 1s both;
+      animation-delay: 2.6s;
 }
 
 span:nth-child(2){
   animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .2s both, fadeIn 1s both;
+      animation-delay: 2.9s;
 }
 
 span:nth-child(3){
   animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .4s both, fadeIn 1s both;
+      animation-delay: 3.2s;
 }
 
 span:nth-child(4){
   animation: flipper 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) .6s both, fadeIn 1s both;
+  animation-delay: 3.5s;
 }
 
 @keyframes flipper{
@@ -164,10 +187,11 @@ line{
 }
 
 
-/*Weg vliegen*/
+/*Lanceer knop*/
 
 #lanceren{
     animation: lanceren 1.5s infinite;
+    animation-iteration-count: 5;
 }
 
 @keyframes lanceren {
@@ -193,7 +217,7 @@ line{
 }
 
 #lanceren:hover{
-    transform: scale(3) rotate(360deg);
+    transform: scale(2) rotate(360deg);
     transform-origin: 50% 50%;
     transform-box: fill-box;
     transition: ease .5s transform
@@ -255,7 +279,7 @@ line{
 }
 
 
-/* Vliegttuig*/
+/* Weg vliegen*/
 
 .vliegWeg{
     animation: vliegen 5s;
@@ -276,6 +300,30 @@ line{
     }
 }
 
+/*Bloemen*/
+
+#bloemen{
+    transition: 10s ease all;
+}
+
+.bloemendraai{
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	animation: bloemen 5s linear infinite;
+    background-image: url("/images/bloempjes.png");
+}
+
+@keyframes bloemen {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px; opacity: 0%}
+    20% {opacity: 100%}
+  50% {background-position: 50px 50px, 0px 0px, 10px 15px;}
+    90% {opacity: 100%}
+  100% {background-position: 100px 100px, -10px -10px, 20px 30px; opacity: 0%}
+}
+
 
 @media only screen and (max-width: 1024px) {
     svg{  
@@ -287,7 +335,7 @@ line{
 @media only screen and (max-width: 1200px) {
     svg{  
         transform: scale(1.5);
-        padding-top: 50px;;
+        padding-top: 50px;
     }
     .tekst{
     color: #E4804C;
@@ -296,16 +344,114 @@ line{
     font-size: 1.2em;
 }
 
+#background{
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: -50px;
+}
+.overlay{
+    opacity: 15%;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: multiply;
+    pointer-events:none;
+    width: 100%;
+    height: 100%;
+    margin-top: 45px;
+    overflow: hidden;
+}
+
+#Eindpunt-boven, #Eindpunt-rechts, #Eindpunt-onder, #lanceren{
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+    
+/*Lanceer knop*/
+
+@keyframes lanceren {
+    0% {
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: ease .5s transform
+    }
+    50% {
+    transform: scale(1.5);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: ease .5s transform
+
+    }
+    100%{
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: ease .5s transform
+    }
+}
 }
 
 
 @media only screen and (max-width: 650px) {
     svg{  
         transform: scale(2.5);
-        padding-top: 50px;;
+        padding-top: 50px;
     }
     .tekst{
     color: #E4804C;
     position: absolute;
     margin: 50px 150px;
+}
+
+#background{
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: -50px;
+}
+    
+.overlay{
+    opacity: 15%;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: multiply;
+    pointer-events:none;
+    width: 100%;
+    height: 100%;
+    margin-top: 45px;
+    overflow: hidden;
+}
+#Eindpunt-boven, #Eindpunt-rechts, #Eindpunt-onder, #lanceren{
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+/*Lanceer knop*/
+
+@keyframes lanceren {
+    0% {
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: ease .5s transform
+    }
+    50% {
+    transform: scale(1.5);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: ease .5s transform
+
+    }
+    100%{
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    transition: ease .5s transform
+    }
+}
 }
