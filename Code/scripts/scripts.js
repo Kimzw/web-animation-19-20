@@ -3,6 +3,7 @@ document.querySelector('#Eindpunt-boven').addEventListener('click', driehoekAcht
 
 function driehoekAchtergrond() {
   document.body.classList.toggle("driehoekAchtergrond")
+  document.querySelector('#Eindpunt-boven').classList.toggle("clicked")
 }
 
 
@@ -11,6 +12,7 @@ document.querySelector('#Eindpunt-rechts').addEventListener('click', cirkelAchte
 
 function cirkelAchtergrond() {
   document.body.classList.toggle("cirkelAchtergrond")
+  document.querySelector('#Eindpunt-rechts').classList.toggle("clicked")
 }
 
 document.querySelector('#Eindpunt-onder').addEventListener('click', vierkantAchtergrond)
@@ -18,6 +20,7 @@ document.querySelector('#Eindpunt-onder').addEventListener('click', vierkantAcht
 
 function vierkantAchtergrond() {
   document.body.classList.toggle("vierkantAchtergrond")
+  document.querySelector('#Eindpunt-onder').classList.toggle("clicked")
 }
 
 
@@ -37,18 +40,16 @@ function startMotoren() {
 
 
 
-document.querySelector('#Vleugel-rechts').addEventListener('click', draaiRechts)
 
+window.addEventListener('keydown', toggle)
 
-function draaiRechts() {
-  document.querySelector('#Vliegtuig').classList.toggle("draaiRechts") 
-}
-
-document.querySelector('#Vleugel-links').addEventListener('click', draaiLinks)
-
-
-function draaiLinks() {
-  document.querySelector('#Vliegtuig').classList.toggle("draaiLinks") 
+function toggle(event) {
+    if(event.keyCode === 39){
+    document.querySelector('#Vliegtuig').classList.toggle('draaiRechts');
+    }
+    else if (event.keyCode === 37) {
+    document.querySelector('#Vliegtuig').classList.toggle('draaiLinks');
+    }
 }
 
 
