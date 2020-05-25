@@ -24,3 +24,12 @@ De weken erna heb ik flink moeten doorpakken op terug op schema te komen. Mijn f
 
 ## Responsive
 Het toetsenbord event heb ik ook klikbaar gemaakt zodat deze animatie op tablet en mobiel nogsteeds werkt. Daarnaast zijn de knoppen allemaal groter. Het vliegtuig vult bij mobiel het volledige scherm, om zo de interacties zo simpel en klikbaar mogelijk te maken.
+
+### Desktop versie
+![](Code/images/Desktop.jpg)
+
+### Tablet versie
+![](Code/images/Tablet.jpg)
+
+### Mobiele versie
+![](Code/images/Mobiel.jpg)
